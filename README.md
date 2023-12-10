@@ -1,0 +1,1 @@
+Para poder visualizar los cambios de computador a celular se debe utilizar "ionic serve --external" de esta forma tendremos un http local y uno externo que abriremos este ultimo en el dispositivo movil
