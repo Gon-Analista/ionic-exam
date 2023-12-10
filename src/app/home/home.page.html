@@ -1,20 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true" class="ion-padding">
+  
+  <div class="cabeza2" *ngIf="isDesktop; else mobileContent">
+    <div #logAnim class="img-container">
+      <ion-img src="assets/logo-hd.png" class="img1"></ion-img>
+    </div>
+    <div class="btn1">
+      <h2 class="custom-heading">Descarga nuestra aplicacion escaneando el codigo QR!</h2>
+      <br>
+      <img src="assets/qrcode-generado.png" alt="QR Code">
+    </div>
   </div>
+
+  <ng-template class="cabeza2" #mobileContent>
+    <br>
+    <div #logAnim class="img-container">
+      <ion-img src="assets/logo-hd.png" class="img2"></ion-img>
+    </div>
+    <br>
+    <div class="btn1 buttons">
+      <ion-button class="custom-button" (click)="downloadApp()">
+        Descargar ahora RegistrApp
+      </ion-button>
+    </div>
+  </ng-template>
 </ion-content>
