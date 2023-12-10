@@ -14,6 +14,7 @@ import { Animation, AnimationController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
   isDesktop: boolean | undefined;
+  isMovil: boolean | undefined;
   @ViewChild('logAnim', { read: ElementRef }) logAnim!: ElementRef;
   private animation!: Animation;
 
@@ -42,6 +43,7 @@ export class HomePage implements OnInit {
 
   checkPlatform() {
     this.isDesktop = this.platform.is('desktop');
+    this.isMovil = this.platform.is('mobile');
   }
 
   downloadApp() {
